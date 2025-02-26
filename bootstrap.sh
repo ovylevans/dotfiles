@@ -74,6 +74,11 @@ function install_wlogout
     echo "1" | yay --noconfirm --useask wlogout
 }
 
+function install_local
+{
+    cp -r ${SCRIPT_DIR}/.local ~/.local
+}
+
 link_bash_aliases
 install_pacman_packages
 install_yay
@@ -82,3 +87,4 @@ install_nvim
 install_starship
 link_sway_configs
 link_kitty_config
+install_local
