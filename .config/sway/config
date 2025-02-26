@@ -26,11 +26,12 @@ client.urgent           $cl_urge $cl_urge $cl_fore $cl_urge $cl_urge
 
 # Bindings
 bindsym Print exec grim -g "$(slurp -d)" - | wl-copy
-bindsym $mod+Return exec $term
+bindsym $mod+Return exec swaymsg workspace $ws1 && $term
 bindsym $mod+Shift+q kill
 bindsym $mod+Tab exec wofi --show run
 bindsym $mod+Shift+r reload
-bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
+bindsym $mod+Shift+e exec wlogout -p layer-shell
+bindsym $mod+l exec hyprlock
 
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
@@ -107,5 +108,14 @@ bindsym $mod+Shift+n exec swaync-client -t -sw
 # Workplace Setup
 exec 'sleep 3; swaymsg workspace 1'
 
+# Application bindings
+bindsym $mod+Shift+v exec swaymsg workspace $ws2 && code
+bindsym $mod+Shift+c exec swaymsg workspace $ws3 && google-chrome-stable
+
+# Workspace Assignments
+assign [class="Chromium"] workspace $ws3
+assign [class="Google-chrome"] workspace $ws3
+assign [class="Code"] workspace $ws2
+assign [app_id="kitty"] workspace $ws1
 
 include /etc/sway/config.d/*
