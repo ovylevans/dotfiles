@@ -20,6 +20,14 @@ function link_bash_aliases
 {
     rm -rf ~/.bash_aliases
     ln -sf ${SCRIPT_DIR}/.bash_aliases ~/.bash_aliases
+
+    touch ~/.bashrc
+
+    cat ~/.bashrc | grep "source ~/.bash_aliases" &> /dev/null
+
+    if [ $? != 0 ]; then
+        echo "source ~/.bash_aliases" >> ~/.bashrc
+    fi;
 }
 
 function install_nvim
@@ -34,7 +42,13 @@ function install_nvim
 function install_starship
 {
     curl -sS https://starship.rs/install.sh | sh
-    echo 'eval "$(starship init bash)"' >> ~/.bashrc
+
+    touch ~/.bashrc
+
+    cat ~/.bashrc | grep -w 'starship init bash' &> /dev/null
+    if [ $? != 0 ]; then
+        echo 'eval "$(starship init bash)"' >> ~/.bashrc
+    fi;
 }
 
 function link_sway_configs
@@ -47,9 +61,24 @@ function link_sway_configs
     ln -sf ${SCRIPT_DIR}/.config/wlogout ~/.config/wlogout
 }
 
-# install_pacman_packages
-# install_nvim
-# install_starship
+function install_yay
+{
+    git clone https://aur.archlinux.org/yay.git /tmp/yay
+    pushd /tmp/yay
+    makepkg -s -i --noconfirm 
+    popd
+}
+
+function install_wlogout
+{
+    echo "1" | yay --noconfirm --useask wlogout
+}
+
+link_bash_aliases
+install_pacman_packages
+install_yay
+install_wlogout
+install_nvim
+install_starship
 link_sway_configs
-# link_kitty_config
-# link_bash_aliases
+link_kitty_config

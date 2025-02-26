@@ -10,7 +10,6 @@ ttf-fira-code
 kitty
 gcc
 swaybg
-snapd
 swaync
 libnotify
 rofi

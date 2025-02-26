@@ -4,3 +4,6 @@ alias gcdef="git config user.name \"Evan Stoddard\" && git config user.email \"e
 # vim
 alias vim="nvim"
 alias vi="nvim"
+
+# ll
+alias ll="ls -ltra --color=always"
