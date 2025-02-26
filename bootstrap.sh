@@ -53,12 +53,13 @@ function install_starship
 
 function link_sway_configs
 {
-    rm -rf ~/.config/sway ~/.config/waybar ~/.config/wofi ~/.config/swaync ~/.config/wlogout
+    rm -rf ~/.config/sway ~/.config/waybar ~/.config/wofi ~/.config/swaync ~/.config/wlogout ~/.config/hypr
     ln -sf ${SCRIPT_DIR}/.config/sway ~/.config/sway
     ln -sf ${SCRIPT_DIR}/.config/waybar ~/.config/waybar
     ln -sf ${SCRIPT_DIR}/.config/wofi ~/.config/wofi
     ln -sf ${SCRIPT_DIR}/.config/swaync ~/.config/swaync
     ln -sf ${SCRIPT_DIR}/.config/wlogout ~/.config/wlogout
+    ln -sf ${SCRIPT_DIR}/.config/hypr ~/.config/hypr
 }
 
 function install_yay
@@ -76,7 +77,7 @@ function install_wlogout
 
 function install_local
 {
-    cp -r ${SCRIPT_DIR}/.local ~/.local
+    cp -r ${SCRIPT_DIR}/.local ~/
 }
 
 link_bash_aliases
