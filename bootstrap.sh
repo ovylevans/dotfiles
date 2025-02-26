@@ -43,6 +43,7 @@ function link_sway_configs
     ln -sf ${SCRIPT_DIR}/.config/rofi ~/.config/rofi
     ln -sf ${SCRIPT_DIR}/.config/waybar ~/.config/waybar
     ln -sf ${SCRIPT_DIR}/.config/wofi ~/.config/wofi
+    ln -sf ${SCRIPT_DIR}/.config/swaync ~/.config/swaync
 }
 
 install_pacman_packages

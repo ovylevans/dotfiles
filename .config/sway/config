@@ -1,6 +1,6 @@
 # Basic Settings
 set $mod Mod4
-set $term alacritty
+set $term kitty
 
 # Wallpaper
 output * background ~/.local/wallpapers/lofi_cafe.jpg fill
@@ -43,6 +43,17 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # Workspace Bindings
+set $ws1 ""
+set $ws2 ""
+set $ws3 ""
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 ""
+
 bindsym $mod+1 workspace $ws1
 bindsym $mod+2 workspace $ws2
 bindsym $mod+3 workspace $ws3
@@ -88,6 +99,10 @@ bindsym $mod+r mode "resize"
 bar {
     swaybar_command waybar
 }
+
+# Notification center
+exec swaync
+bindsym $mod+Shift+n exec swaync-client -t -sw
 
 # Workplace Setup
 exec 'sleep 3; swaymsg workspace 1'
