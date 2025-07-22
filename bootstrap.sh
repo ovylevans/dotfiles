@@ -58,6 +58,7 @@ function link_configs
     ln -sf ${SCRIPT_DIR}/.config/rofi ~/.config/rofi
     ln -sf ${SCRIPT_DIR}/.config/swaync ~/.config/swaync
     ln -sf ${SCRIPT_DIR}/.config/wlogout ~/.config/wlogout
+    ln -sf ${SCRIPT_DIR}/.config/nvim ~/.config/nvim
 }
 
 function install_yay
@@ -85,7 +86,12 @@ function install_wallpapers
 
     rm -rf ~/.local/wallpapers
 
-    ln -sf ${SCRIPT_DIR}/.local/wallpapers
+    ln -sf ${SCRIPT_DIR}/.local/wallpapers ~/.local/wallpapers
+}
+
+function install_yay_packages
+{
+    echo "" | yay --noconfirm --useask - < ${SCRIPT_DIR}/yay_package_list.txt
 }
 
 link_bash_aliases
@@ -93,7 +99,9 @@ install_pacman_packages
 install_yay
 install_wlogout
 install_nvim
-install_oh_my_zsh
+install_yay_packages
 link_configs
 link_kitty_config
 install_wallpapers
+install_oh_my_zsh
+

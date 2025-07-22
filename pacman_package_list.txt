@@ -16,3 +16,9 @@ brightnessctl
 zsh
 kanshi
 tmux
+rofi
+arm-none-eabi-gcc
+arm-none-eabi-newlib
+arm-none-eabi-binutils
+arm-none-eabi-gdb
+wl-clipboard

@@ -1,9 +1,9 @@
 # Basic Settings
 set $mod Mod4
-set $term ghostty
+set $term kitty
 
 # Wallpaper
-output * background ~/.local/wallpapers/space.jpg fill
+output * background ~/.local/wallpapers/lofi_room.jpg fill
 
 # Visual
 gaps inner 8
@@ -115,6 +115,6 @@ bindsym $mod+Shift+c exec swaymsg workspace $ws3 && google-chrome-stable
 assign [class="Chromium"] workspace $ws3
 assign [class="Google-chrome"] workspace $ws3
 assign [class="Code"] workspace $ws2
-assign [app_id="com.mitchellh.ghostty"] workspace $ws1
+assign [class="Kitty"] workspace $ws1
 
 include /etc/sway/config.d/*

@@ -1,3 +1,6 @@
 google-chrome
 wprop
 kanshi
+ttf-phosphor-icons
+jlink
+slack-bin
