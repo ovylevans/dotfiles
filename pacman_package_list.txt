@@ -24,3 +24,4 @@ arm-none-eabi-gdb
 wl-clipboard
 thefuck
 libxcrypt-compat
+unzip
