@@ -18,5 +18,11 @@ end
 require "lazy_setup"
 require "polish"
 
+-- Set .h files to C instead of C++
+vim.filetype.add({
+  extension = {
+    h = "c",
+  },
+})
 
 vim.keymap.set("n", "<C-@>", "<Esc><Cmd>ToggleTerm<CR>", { noremap = true, silent = true })
