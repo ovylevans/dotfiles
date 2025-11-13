@@ -4,3 +4,8 @@ kanshi
 ttf-phosphor-icons
 jlink
 slack-bin
+firefox
+wdisplay
+zen-browser-bin
+wdisplays-persistent
+hyprlock
