@@ -1,0 +1,6 @@
+
+profile {
+    output DP-7 position 5360,376 mode 1920x1080@60.0000 scale 1.00 transform 90
+    output DP-5 position 1920,0 mode 3440x1440@60.0000 scale 1.00 transform normal
+    output eDP-1 position 3440,1440 mode 1920x1200@60.0030 scale 1.00 transform normal
+}

@@ -61,6 +61,7 @@ function link_configs
     ln -sf ${SCRIPT_DIR}/.config/nvim ~/.config/nvim
     ln -sf ${SCRIPT_DIR}/.config/clangd ~/.config/clangd
     ln -sf ${SCRIPT_DIR}/.config/hypr ~/.config/hypr
+    ln -sf ${SCRIPT_DIR}/.config/kanshi ~/.config/kanshi
 }
 
 function install_yay
