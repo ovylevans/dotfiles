@@ -125,6 +125,7 @@ bar {
 # Notification center
 exec swaync
 exec kanshi
+exec wmname LG3D
 bindsym $mod+Shift+n exec swaync-client -t -sw
 
 # Workplace Setup

@@ -9,3 +9,4 @@ wdisplay
 zen-browser-bin
 wdisplays-persistent
 hyprlock
+wmname

@@ -50,9 +50,9 @@ function install_oh_my_zsh
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 }
 
-function link_configs 
+function link_configs
 {
-    rm -rf ~/.config/sway ~/.config/waybar ~/.config/wofi ~/.config/swaync ~/.config/wlogout ~/.config/hypr ~/.config/nvim
+    rm -rf ~/.config/sway ~/.config/waybar ~/.config/wofi ~/.config/swaync ~/.config/wlogout ~/.config/hypr ~/.config/nvim ~/.config/gtk-3.0 ~/.config/gtk-4.0
     ln -sf ${SCRIPT_DIR}/.config/sway ~/.config/sway
     ln -sf ${SCRIPT_DIR}/.config/waybar ~/.config/waybar
     ln -sf ${SCRIPT_DIR}/.config/rofi ~/.config/rofi
@@ -62,6 +62,8 @@ function link_configs
     ln -sf ${SCRIPT_DIR}/.config/clangd ~/.config/clangd
     ln -sf ${SCRIPT_DIR}/.config/hypr ~/.config/hypr
     ln -sf ${SCRIPT_DIR}/.config/kanshi ~/.config/kanshi
+    ln -sf ${SCRIPT_DIR}/.config/gtk-3.0 ~/.config/gtk-3.0
+    ln -sf ${SCRIPT_DIR}/.config/gtk-4.0 ~/.config/gtk-4.0
 }
 
 function install_yay
